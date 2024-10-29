@@ -1,4 +1,5 @@
 {
+  "homepage": "https://virajrao.github.io/Realtime-editor",
   "name": "realtime-editor",
   "version": "0.1.0",
   "private": true,
@@ -20,8 +21,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start:front": "react-scripts start",
-    "start": "yarn build && yarn server:prod",
+    "start:front": "react-scripts start", 
+    "start": "yarn build && yarn server:prod", 
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",    
     "build": "react-scripts build",
     "server:dev": "nodemon server.js",
     "server:prod": "node server.js",
@@ -47,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.2.0",
     "nodemon": "^3.1.7"
   },
   "proxy": "http://localhost:5000"
